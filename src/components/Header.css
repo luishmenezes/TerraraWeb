@@ -1,0 +1,199 @@
+.site-header {
+  background-color: #111;
+  padding: 8px 50px;
+  border-bottom: 1px solid #222;
+  font-family: 'Arial', sans-serif;
+}
+
+.header-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo img {
+  height: 80px;
+  object-fit: contain;
+}
+
+.nav-links {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  position: relative;
+  padding-bottom: 4px;
+  transition: color 0.3s ease;
+}
+
+.nav-links a.active::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #2A4D69;
+  left: 0;
+  bottom: 0;
+}
+
+.nav-links a:hover {
+  color: #ccc;
+}
+
+.contact-btn a {
+  border: 1.5px solid white;
+  color: white;
+  padding: 6px 18px;
+  border-radius: 8px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 400;
+  font-size: 14px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.contact-btn a:hover {
+  background-color: white;
+  color: #111;
+}
+
+.contact-btn svg {
+  font-size: 18px;
+  line-height: 0;
+}
+
+.nav-links li a {
+  position: relative;
+  text-decoration: none;
+  color: #111;
+  padding-bottom: 4px;
+}
+
+.nav-links li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 0;
+  background-color: green;
+  transition: width 0.3s ease;
+}
+
+.nav-links li a:hover::after {
+  width: 100%;
+}
+
+.site-header {
+  background-color: #111; /* Ajuste conforme seu tema */
+  padding: 10px 20px;
+  color: white;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo img {
+  height: 80px; /* Ajuste o tamanho do logo */
+}
+
+/* Navegação */
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  position: relative;
+  padding-bottom: 4px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+/* Linha embaixo que aparece ao passar o mouse */
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 0;
+  background-color: #2A4D69; /* Verde da linha */
+  transition: width 0.3s ease;
+}
+
+/* Ao passar o mouse a linha cresce */
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+/* Link ativo com linha fixa */
+.nav-links a.active::after {
+  width: 100%;
+}
+
+/* Botão fale conosco */
+.contact-btn a {
+  display: flex;
+  align-items: center;
+  color: white;
+  border: 1px solid white;
+  border-radius: 20px;
+  padding: 6px 12px;
+  text-decoration: none;
+  font-weight: 600;
+  gap: 6px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+
+
+.contact-btn a {
+  transition: transform 0.3s ease; /* para a animação ficar suave */
+  
+}
+
+.contact-btn a:hover {
+  transform: scale(1.05); /* aumenta 5% o tamanho */
+  color: black;
+}
+
+/* Responsividade para telas menores que 768px */
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .contact-btn {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .contact-btn a {
+    width: fit-content;
+  }
+
+  .logo img {
+    height: 50px;
+  }
+}
