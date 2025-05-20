@@ -1,8 +1,16 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
 .units-section {
   background: #e4e4e4;
   padding: 60px 80px;
   text-align: center;
   align-items: center;
+  margin: 0 auto; /* isso ajuda com a centralização também */
 }
 
 .units-section h3 {
@@ -223,7 +231,7 @@
 @media (max-width: 768px) {
 
   .home-hero {
-    padding: 20px;
+    width: 100%;
   }
 
   .top-section {
@@ -247,24 +255,30 @@
     margin-top: 20px;
   }
 
+
+
   .bottom-section ul {
     padding-left: 20px;
   }
 
+  .units-section {
+  padding: 30px 0; /* reduz o padding lateral para dispositivos móveis */
+}
+
   .units-cards {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;  /* garante centralização no eixo principal */
-    margin-left: auto !important;  /* força margem automática */
-    margin-right: auto !important; /* força margem automática */
-    width: 100%;  /* garante ocupar toda a largura possível */
-    max-width: 320px; /* limite máximo para não ficar muito largo */
+   flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto; /* centraliza completamente */
+  padding: 0;
   }
 
   .unit-card {
     width: 100%;
     max-width: 280px;
-    text-align: center;
+    
   }
 
   .about-section {
@@ -301,4 +315,9 @@
     font-size: 0.95rem;
     padding: 0 10px;
   }
+  .wrapper, main {
+  padding: 0;
+  margin: 0;
+}
+
 }
